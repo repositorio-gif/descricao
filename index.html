@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,300&display=swap" rel="stylesheet">
+    <title>Gerador de Descrições</title>
+    <link rel="icon" href="image/icons8-lizard-96.png" type="image/png">
+    <script src="js/main.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <section class="description">
+            <div class="title">
+                <h1>Gerador de Descrições</h1>
+            </div>
+            <div class="container">
+                <form action="">
+                    <div class="form">
+                        <div class="input">
+                            <input list="failure-types" id="tipo" required autocomplete="off" />
+                            <label for="tipo">Tipo de Falha</label>
+                            <span class="error"></span>
+                            <datalist id="failure-types"></datalist>
+                        </div>
+
+                        <div class="input hostname">
+                            <input type="text" id="hostA" size="23" maxlength="23" required autocomplete="off" />
+                            <label for="hostA">Hostname A</label>
+                            <span class="error"></span>
+                        </div>
+
+                        <div class="input hostname">
+                            <input type="text" id="hostB" size="23" maxlength="23" required autocomplete="off" />
+                            <label for="hostB">Hostname B</label>
+                            <span class="error"></span>
+                        </div>
+
+                        <div class="input">
+                            <input list="partners" class="select-form" id="partner" required autocomplete="off" />
+                            <label for="partner">Parceiro</label>
+                            <span class="error"></span>
+                            <datalist id="partners"></datalist>
+                        </div>
+
+                    </div>
+                    <div class="button">
+                        <div class="radio">
+                            <ul>
+                                <li>
+                                    <input type="radio" id="ONLY" name="fibra" value="ONLY" checked>
+                                    <label for="ONLY">ONLY</label>
+                                </li>
+                                <li>
+    
+                                    <input type="radio" id="WORK" name="fibra" value="WORK">
+                                    <label for="WORK">WORK</label>
+                                </li>
+                                <li>
+    
+                                    <input type="radio" id="PROT" name="fibra" value="PROT">
+                                    <label for="PROT">PROT</label>
+                                </li>
+                            </ul>
+                        </div>
+                        <button class="btn-gerar" type="submit" id="gerar">Gerar</button>
+                    </div>
+                </form>
+
+            </div>
+            <code class="resultado">
+                <span id="response"></span>
+                <button type="button" class="copy" id="copyButton">
+                    <img src="image/copy.svg" alt="copy">
+                </button>
+                
+            </code>
+            <div class="sites"></div>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>
