@@ -169,26 +169,20 @@ function gerar() {
     })
     if (failure.includes('FALHA') || failure.includes('TEMPERATURA')) {
         if (failure.includes('ENERGIA')) {
-            response.innerText = `Aut Bdesk:# ` +
-    `${pops[0].UF}${separador[3]}` +
-
+            response.innerText = `Aut Bdesk:#` + `${pops[0].UF}${separador[3]}` +
                 `${listFailureTypes[0][failure]}${separador[3]}` +
                 `${pops[0].MUNICIPIO}${separador[2]}${pops[0].POP}${separador[1]}` +
                 `${pops[0].UF}${separador[0]}${pops[0].SIGLA}${separador[0]}${pops[0].POP}${separador[3]}` +
                 `${selectPartner}`
         } else {
-            response.innerText = `Aut Bdesk:# ` +
-    `${pops[0].UF}${separador[3]}` +
-
+            response.innerText = `Aut Bdesk:#` + `${pops[0].UF}${separador[3]}` +
                 `${listFailureTypes[0][failure]}${separador[3]}` +
                 `${pops[0].MUNICIPIO}${separador[2]}${pops[0].POP}${separador[1]}` +
                 `${hostA}${separador[3]}` +
                 `${fiber}${separador[3]}${selectPartner}`
         }
     } else {
-        response.innerText = `Aut Bdesk:# ` +
-    `${pops[0].UF}${separador[3]}` +
-
+        response.innerText = `Aut Bdesk:#` + `${pops[0].UF}${separador[3]}` +
             `${listFailureTypes[0][failure]}${separador[3]}` +
             `${pops[0].MUNICIPIO}${separador[2]}${pops[0].POP}${separador[1]}` +
             `${pops[1].MUNICIPIO}${separador[2]}${pops[1].POP}${separador[3]}` +
